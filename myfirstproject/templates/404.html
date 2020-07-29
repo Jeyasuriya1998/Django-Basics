@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block title %}404 page{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h1 class="display-4">Page Not Found</h1>
+    <p class="lead">Sorry, This page is missing or doesnot exist</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="{%url 'get_hello' %}" role="text">Go to Home Page</a>
+</div>
+{% endblock %}

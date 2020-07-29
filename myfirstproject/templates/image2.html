@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}   <!--load the static file for image -->
+{% block title %}Image Load{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img  src= "{% static 'suriya.jpeg'%}" class="img-fluid" alt="Responsive Image" >
+        </div>
+        <div class="col-md-6">
+            <img src= "{% static 'suriya.jpeg'%}" class="img-fluid" alt="Responsive Image" >
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block title %}Django If Forth page {% endblock%}
+
+{% block content %}
+{% if ans %}
+{{num1}} is greater then {{num2}}
+{% else %}
+{{num2}} is greater then {{num1}}
+{% endif %}
+{% endblock %}

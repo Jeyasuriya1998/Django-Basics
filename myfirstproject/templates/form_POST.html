@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}My Form Post{% endblock %}
+{% block content %}
+<h1 style="text-align:center">My Form</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" style="margin:0 auto">
+            <form method="POST" action="{% url 'mysubmitform_POST'%}">
+            {% csrf_token %}
+           <!-- method="POST" for views.py action="{% url 'mysubmitform_GET'%}" when submit button pressed -->
+                <div class="form-group">
+                    <label for="mytext">MyText</label>
+                    <input type="text" id="mytext" class="form-control" name="mytext">
+                </div>
+                <div class="form-group">
+                    <label for="mytextarea">MyTextArea</label>
+                    <textarea id="mytextarea" name="mytextarea" class="form-control" rows=3></textarea>
+                </div>
+                <div class="form-group">
+                    <button text="submit" class="btn btn-primary" style="margin:0 auto; display:block">Submit</button>
+                    <!--class="btn btn-primary" for colour the button -->
+                    <!--style="margin:0 auto; display:block" for make the button center-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
